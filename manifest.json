@@ -1,0 +1,26 @@
+{
+  "name": "WhatStatus Remover",
+  "action": {},
+  "manifest_version": 3,
+  "version": "0.1",
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "description": "Remove status icon of whatsapp web",
+  "content_scripts": [
+    {
+    "matches": ["https://web.whatsapp.com/"],
+     "js": ["content.js"],
+     "run_at": "document_end"
+    }
+   ], 
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
+}
